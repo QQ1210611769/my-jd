@@ -126,8 +126,6 @@
     })
 
 
-
-
     // 加入购物车主要存储商品sid和购买数量
     let sidArr = [];
     let howManyArr = []; //购买数量
@@ -143,10 +141,22 @@
         }
     }
 
+    // 判断输入的值是不是数字
+    $(".goodsinfo-word .p-btn input").on("input", function () {
+        // 输入商品数量
+        let $value = $(this).val();
+        let $reg = /^\d+$/g;
+        if (!$reg.test($value)) {
+            $(this).val(1);
+        }
+    })
+
+
     // 点击”加入购物车“
     $(".p-btn a").on("click", function () {
         var $sidCurrent = $(this).parents(".goodsinfo").find("#smallpic").attr("sid");
         cookietoarray(); //cookie取出来
+
         if ($.inArray($sidCurrent, sidArr) == -1) { //当前商品sid未存入，第一次点击加入购物车
             sidArr.push($sidCurrent);
             jscookie.add("sid", sidArr, 10);
@@ -157,7 +167,6 @@
             // console.log(parseInt(jscookie.get($sidCurrent))); //这里不用用这个找到cookie里sid对应的数量，该get方法不能实现
             // console.log(parseInt($("#count").val()));
             // console.log(parseInt($.inArray($sidCurrent, sidArr)));//$.inArray()方法返回$sidCurrent在sidArr的index
-
 
             howManyArr[$.inArray($sidCurrent, sidArr)] = $totalNum;
             jscookie.add("howMany", howManyArr, 10);

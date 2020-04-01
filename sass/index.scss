@@ -157,7 +157,7 @@ a {
                 }
             }
 
-            
+
             .navitems {
 
                 position: absolute;
@@ -212,6 +212,7 @@ a {
 
         .left {
             position: relative;
+
             &>ul {
                 width: 190px;
                 height: 450px;
@@ -232,6 +233,7 @@ a {
                         color: red;
                     }
                 }
+
                 li.active {
                     background-color: #ccc;
                 }
@@ -248,29 +250,157 @@ a {
                 box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
                 display: none;
                 transition: top 0.3s ease;
+
+                .item {
+                    margin-top: 20px;
+                    margin-left: 20px;
+
+                    .i-top1 {
+
+                        a {
+                            display: inline-block;
+                            margin-right: 10px;
+                            padding: 0 10px;
+                            height: 24px;
+                            font-size: 13px;
+                            cursor: pointer;
+                            background-color: #333;
+                            line-height: 24px;
+                            color: #fff;
+                        }
+                    }
+
+                    dl {
+                        margin-top: 10px;
+                        display: block;
+                        overflow: hidden;
+                        position: relative;
+                        dt {
+                            float: left;
+                            padding-top: 2px;
+                            padding-right: 10px;
+
+                            a {
+                                font-size: 12px;
+                                cursor: pointer;
+                                font-weight: 800;
+
+                                color: #333;
+                            }
+                        }
+
+                        dd {
+                            // float: left;
+                            position: absolute;
+                            left: 70px;
+                            a {
+                                float: left;
+                                margin: 3px 0;
+                                padding: 0 7px;
+                                height: 16px;
+                                line-height: 16px;
+                                white-space: nowrap;
+                                color: #666;
+                                font-size: 12px;
+
+                            }
+                        }
+                    }
+                }
             }
         }
+        .banner{
+            .pic{
+
+            }
+            .left{
+
+            }
+            .right{
+
+            }
+            .dian{
+
+            }
+        }
+        .right{
+            
+        }
     }
 }
-// 手机商品列表
-.phone-goods{
-    & > button{
 
+%text-ellipsis {
+    // white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin price($color:#e4393c, $font-s:20px, $h:22px, $line-h:22px, $f-w:400px) {
+    color: $color;
+    font-size: $font-s;
+    height: $h;
+    line-height: $line-h;
+    font-weight: $f-w;
+}
+
+// 手机商品列表
+.phone-goods {
+    &>button {}
+
+    &>.list {
+        width: 100%;
     }
-    &>.list{
-        width: 100%; 
-    }
-    & > .list ul{
+
+    &>.list ul {
         margin: 0 auto;
         overflow: hidden;
-        &>li{
+
+        &>li {
             float: left;
-            padding:10px;
+            padding: 10px;
+            margin-bottom: 45px;
+
+            a {
+                color: #666;
+            }
+
+
+            i {
+                @include price(#e4393c, 16px, 20px, 20px, 400px);
+                display: inline-block;
+                font-style: normal;
+            }
+
+            .price {
+                @include price();
+                display: inline-block;
+            }
+
+            .introduce {
+                width: 200px;
+                height: 43px;
+                font-size: 12px;
+                line-height: 20px;
+                @extend %text-ellipsis;
+
+                &:hover {
+                    color: #e4393c;
+                }
+            }
+
+            // 评价
+            .pj {
+                font-size: 14px;
+                color: #a7a7a7;
+
+                a {
+                    color: #646fb0;
+                }
+            }
         }
-        p{
-            width: 200px; 
+
+        p {
+            width: 200px;
         }
     }
 }
-
-

@@ -23,9 +23,13 @@
                 <li>
                    <a href="detail.html?sid=${ele.sid}" target="_blank">
                         <img src='${ele.url}' class='lazy' width='200px' height='200px'/>
-                        <p>${ele.sid}${ele.title}</p>
-                        <p><span class="price">￥${ele.price}</span></p>
-                        <p>${ele.salenumber}</p>
+                        
+                        <p class=""p1>
+                        <i>￥</i>
+                        <span class="price">${ele.price}</span>
+                        </p>
+                        <p class="introduce">${ele.title}</p>
+                        <strong class="pj">已有<a href="#">${ele.salenumber}</a>人评价</strong>
                    </a>
                 </li>
             `;
@@ -65,9 +69,13 @@
                         <li>
                             <a href="detail.html?sid=${value.sid}" target="_blank">
                                 <img src="${value.url}"/>
-                                <p>${value.sid}${value.title}</p>
-                                <span class="price">￥${value.price}</span>
-                                <span>${value.salenumber}</span>
+                                
+                                <p class="p1">
+                                <i>￥</i>
+                                <span class="price">${value.price}</span>
+                                </p>
+                                <p class="introduce">${value.title}</p>
+                                <strong class="pj">已有<a href="#">${ele.salenumber}</a>人评价</strong>
                             </a>
                         </li>
                     `;
@@ -92,7 +100,7 @@
 
         // 默认排序
         $('button').eq(0).on('click', function () {
-            $('.list ul').empty();
+            // $('.list ul').empty();
             $.each(array_default, function (index, ele) {
                 $('.list ul').append(ele);
             })
@@ -117,8 +125,8 @@
                     }
                 }
             }
-            // 先清空，再把排序好的数组append进ul里
-            $('.list ul').empty();
+            
+            // $('.list ul').empty();
             $.each(array, function (index, ele) {
                 $('.list ul').append(ele);
             })
@@ -139,8 +147,13 @@
                     }
                 }
             }
-            $('.list ul').empty();
+            // 这里可以省略empty
+            // append在追加的时候，如果追加的是jQuery元素对象，而jQuery对象在追加的元素中存在，直接取出该元素对象，在后面追加
+            // 如果追加的是内容结构，依然和appendChild一样，后面继续追加。
+            // $('.list ul').empty(); 
             $.each(array, function (index, ele) {
+                console.log(ele);//jquery元素对象
+                
                 $('.list ul').append(ele);
             })
         })

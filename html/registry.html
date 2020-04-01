@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+</head>
+
+<body>
+    <fieldset style="width:800px;margin:0 auto;">
+        <legend>用户注册</legend>
+        <form action="http://localhost:8088/htdocs/my/php/registry.php" method="post">
+            <p>
+                <label for="">用户姓名：</label>
+                <input type="text" name="username" class="username">
+                <span class="tishi"></span>
+            </p>
+            <p>
+                <label for="">用户密码：</label>
+                <input type="password" name="password">
+            </p>
+            <p>
+                <label for="">确认密码：</label>
+                <input type="password" name="repass">
+            </p>
+            <p>
+                <label for="">用户邮箱：</label>
+                <input type="text" name="email">
+            </p>
+            <p>
+                <input type="submit" value="用户注册" name="submit">
+            </p>
+        </form>
+    </fieldset>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../script/registry.js"></script>
+</body>
+
+</html>

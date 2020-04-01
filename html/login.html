@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>登录页面</title>
 </head>
 
 <body>
-    <div class="header w">
+    <!-- <div class="header w">
         <a href="https://www.jd.com" class="logo "></a>
         <h3>欢迎注册</h3>
         <div>已有账号？<a href="#"></a>请登录</div>
@@ -35,7 +35,19 @@
         <div class="copyright">
             Copyright©2004-2020&nbsp;&nbsp;京东JD.com&nbsp;版权所有
         </div>
-    </div>
+    </div> -->
+
+    <fieldset style="width:800px;margin:0 auto;">
+        <legend>用户登录</legend>
+        <form action="">
+            <p><label for="">用户姓名：</label><input type="text" class="username"></p>
+            <p><label for="">用户密码：</label><input type="password" class="password"></p>
+            <p><input type="button" value="用户登录" class="btn"> <a href="registry.html">用户注册</a></p>
+        </form>
+    </fieldset>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../script/sha1.js"></script>
+    <script src="../script/login.js"></script>
 </body>
 
 </html>

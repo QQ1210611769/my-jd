@@ -197,6 +197,57 @@ a {
   display: none;
   transition: top 0.3s ease;
 }
+.fs .w .left .cartlist .item {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.fs .w .left .cartlist .item .i-top1 a {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 0 10px;
+  height: 24px;
+  font-size: 13px;
+  cursor: pointer;
+  background-color: #333;
+  line-height: 24px;
+  color: #fff;
+}
+.fs .w .left .cartlist .item dl {
+  margin-top: 10px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+.fs .w .left .cartlist .item dl dt {
+  float: left;
+  padding-top: 2px;
+  padding-right: 10px;
+}
+.fs .w .left .cartlist .item dl dt a {
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 800;
+  color: #333;
+}
+.fs .w .left .cartlist .item dl dd {
+  position: absolute;
+  left: 70px;
+}
+.fs .w .left .cartlist .item dl dd a {
+  float: left;
+  margin: 3px 0;
+  padding: 0 7px;
+  height: 16px;
+  line-height: 16px;
+  white-space: nowrap;
+  color: #666;
+  font-size: 12px;
+}
+
+.phone-goods > .list ul > li .introduce {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 .phone-goods > .list {
   width: 100%;
@@ -208,6 +259,43 @@ a {
 .phone-goods > .list ul > li {
   float: left;
   padding: 10px;
+  margin-bottom: 45px;
+}
+.phone-goods > .list ul > li a {
+  color: #666;
+}
+.phone-goods > .list ul > li i {
+  color: #e4393c;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  font-weight: 400px;
+  display: inline-block;
+  font-style: normal;
+}
+.phone-goods > .list ul > li .price {
+  color: #e4393c;
+  font-size: 20px;
+  height: 22px;
+  line-height: 22px;
+  font-weight: 400px;
+  display: inline-block;
+}
+.phone-goods > .list ul > li .introduce {
+  width: 200px;
+  height: 43px;
+  font-size: 12px;
+  line-height: 20px;
+}
+.phone-goods > .list ul > li .introduce:hover {
+  color: #e4393c;
+}
+.phone-goods > .list ul > li .pj {
+  font-size: 14px;
+  color: #a7a7a7;
+}
+.phone-goods > .list ul > li .pj a {
+  color: #646fb0;
 }
 .phone-goods > .list ul p {
   width: 200px;
